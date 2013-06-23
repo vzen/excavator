@@ -1,0 +1,3 @@
+php_errors.log
+assets/*
+*.sass-cache/*
