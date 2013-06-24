@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Do not run this script directly, since
-# input validation is not its job.
-
 pushd . > /dev/null
 cd $1
 mkdir $2

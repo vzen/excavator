@@ -1,21 +1,11 @@
-# What is Panel?
-
-Panel organizes CSS work on web apps by enforcing
-conventions and a specific workflow. It is an ideology,
-not a tool.
-
-Panel uses the following technologies and concepts:
+Know the following:
 
 * [SMACSS](http://www.smacss.com/)
 * [Sass](http://www.sass-lang.com)
 * [Compass](http://compass-style.org/)
-
-
-Panel comes with documented conventions to keep you away from configuration, and simple commands that deal with repetitive
-tasks so that you can focus more on work.
+* [Zen Grids](http://zengrids.com/)
 
 # The Workflow
-
 
 ```
 /
@@ -34,30 +24,13 @@ tasks so that you can focus more on work.
     config.rb        - Config file for Compass
 ```
 
-# Usage
-
-To make a new partial, run `panel touch FILE` without
-specifying an extention. The file will be generated
-with an underscore and the `.scss` extension, and `@import`
-statements will be automatically added to files that
-need to pull in new styles.
-
-Example: If you run `panel touch calander-widget` in `/scss/module/`,
-`/scss/module/_calander-widget.scss` will be generated and
-`@import "calander-widget";` will be added to `/scss/module/_index.scss`.
-
 # Deployment
 
-Run `compass compile` in the root to compile the source,
-or `compass watch` to compile in real time.
+Run `compass compile` in the root to compile the source, or `compass watch` to compile in real time.
 
 # Directory Structure and Loading Conventions
 
-The SCSS files in the sass directory without underscores
-will be referred to as "aggregator files." All these
-files do is import partials named `_index.scss`
-from top level SMACSS directories (henceforth TLDs).
-Files of this name will simply be called "index files."
+The SCSS files in the sass directory without underscores will be referred to as "aggregator files." All these files do is import partials named `_index.scss` from top level SMACSS directories (henceforth TLDs). Files of this name will simply be called "index files."
 
 ```
 /scss
@@ -80,9 +53,7 @@ Each index file imports all styles inside the directory it
 resides in, as well as all aggregator files in IMMEDIATE
 subdirectories.
 
-No index file should include any specific stylesheets in subdirectories outside of the index file.
-Index files must only import specific styles
-from the directory it immediately resides in.
+No index file should include any specific stylesheets in subdirectories outside of the index file. Index files must only import specific styles from the directory it immediately resides in.
 
 No index file is to import any sheet more than two directories
 deep from it's current location.
@@ -111,6 +82,16 @@ Example:
 ```
 
 For reasons why underscores prefix file names, see Conventions.
+
+# Scripts
+
+To make a new partial, run `scss/new-file.sh <path>`, where the path is relative to `scss/`, must reside in one of the TLDs and ends in the name of the file you want.
+
+Do NOT specify an extention or prefix the file name with anything. The file will be generated with an underscore and the `.scss` extension, and `@import` statements will be automatically added to files that need to pull in new styles.
+
+Example: If you run `scss/new-file.sh module/calander-widget`, `/scss/module/_calander-widget.scss` will be generated and `@import "calander-widget";` will be added to `/scss/module/_index.scss`.
+
+Run `scss/new-dir.sh` and specify a path under a top level directory to create a subdirectory with a new aggregator file.
 
 # Conventions
 
