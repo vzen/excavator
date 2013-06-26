@@ -19,12 +19,8 @@
                         'url'   => array('/site/index')
                     ),
                     array(
-                        'label' => 'About',
-                        'url'   => array('/site/page', 'view'=>'about')
-                    ),
-                    array(
                         'label' => 'Legal',
-                        'url'   => array('/site/legal')
+                        'url'   => array('/site/page', 'view'=>'legal')
                     ),
                 ),
             ));
