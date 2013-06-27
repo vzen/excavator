@@ -25,7 +25,10 @@ return array(
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'abc',
-			'ipFilters'=>array('10.0.0.*', gethostbyname('metasw.net')),
+            'ipFilters'=>array('10.0.0.*', gethostbyname('metasw.net')),
+            'generatorPaths'=>array(
+                'ext.gtc',
+            ),
 		),
 	),
 
