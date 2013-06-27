@@ -1,0 +1,49 @@
+@import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900|Telex');
+
+@import "compass/typography/vertical_rhythm";
+
+.l-grid {
+    // @include debug-vertical-alignment();
+}
+
+p, li {
+    font: {
+        family: 'Telex', sans-serif;
+    }
+
+    line-height:$base-line-height;
+}
+
+.t-centered-text {
+text-align:center;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin:0 0 $base-font-size 0;
+
+    font: {
+        family: 'Source Sans Pro', serif;
+        weight:bold;
+    }
+}
+
+h1 {
+    font-size:3em;
+}
+
+h2 {
+    font-size:2em;
+}
+
+h3 {
+    font-size:1em;
+    font-weight:bold;
+}
+
+li {
+    margin-bottom:1em;
+}
+
+p {
+    margin:$base-font-size 0;
+}

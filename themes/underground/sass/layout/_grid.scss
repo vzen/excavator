@@ -1,0 +1,33 @@
+@import "zen";
+@import "zen/background";
+
+$zen-column-count: $grid-col-count;
+$zen-gutter-width: $width-gutter;
+
+.l-grid {
+    @include zen-grid-container();
+    // @include zen-grid-background();
+}
+
+@media screen and (max-width:$width-tablet-max) {
+    .l-sidebar {
+        @include zen-grid-item(12,1);
+        margin:0 0 $base-font-size 0;
+    }
+
+    .l-content {
+        @include zen-clear();
+        @include zen-grid-item(12,1);
+    }
+}
+
+
+@media screen and (min-width:$width-desktop-min) {
+    .l-sidebar {
+        @include zen-grid-item(4,1);
+    }
+
+    .l-content {
+        @include zen-grid-item(8,5);
+    }
+}
