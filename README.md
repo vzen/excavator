@@ -1,6 +1,6 @@
 # What is Excavator?
 
-Excavator is a [Yii web application](http://www.yiiframework.com/) that uses small modular data miners to report information from the U.S. Federal Government in a uniform manner. All reported data is available to the public. Excavator merely exposes a nicer front end for journalists and activists while supplying a nice extensible back end for developers to add more sources of data.
+Excavator is a [Yii web application](http://www.yiiframework.com/) that uses small modular data miners to report information from public APIs.
 
 # Usage and Application Flow
 
@@ -15,7 +15,7 @@ If you were to remove all mines from Excavator, Excavator would have no knowledg
 
 ### Directory Structure
 
-"<mine>" is a placeholder for a name written in PascalCase.
+"\<mine\>" is a placeholder for a name written in PascalCase.
 
     <mine>/
         <mine>Module.php
@@ -29,7 +29,7 @@ If you were to remove all mines from Excavator, Excavator would have no knowledg
                 FormView.php
                 DataView.php
     
-- *<mine>Module.php*: Module class. Manages module-wide configuration and behaviors.
+- *\<mine\>Module.php*: Module class. Manages module-wide configuration and behaviors.
 - *DefaultController.php*: Renders the interface layout, complete with form and dynamic report.
 - *FormModel.php*: Stores information related to the information the user requests.
 - *DataModel.php*: Stores data user requested.
