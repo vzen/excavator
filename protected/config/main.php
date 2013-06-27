@@ -3,7 +3,8 @@
 // uncomment the following to define a path alias
 $me = dirname(__FILE__);
 
-Yii::setPathOfAlias('actions','/protected/actions');
+Yii::setPathOfAlias('actions',$me.'/../actions');
+Yii::setPathOfAlias('behaviors',$me.'/../components/behaviors');
 
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
@@ -30,7 +31,11 @@ return array(
                 'ext.gtc',
             ),
 		),
-	),
+    ),
+
+    'behaviors'=>array(
+        'behaviors.DirListingBehavior',
+    ),
 
 	// application components
 	'components'=>array(
