@@ -1,0 +1,21 @@
+@import 'color-schemer';
+
+// See https://github.com/Team-Sass/color-schemer
+
+$cs-hue-offset:0;
+$cs-brightness-offset:0;
+$cs-primary:rgb(20, 130, 226);
+$cs-scheme:complement;
+$cs-color-model:ryb;
+
+// Std. Metrics
+$width-phone-portrait:320px;
+$width-tablet-min:321px;
+$width-tablet-max:767px;
+$width-desktop-min:768px;
+
+$base-font-size:16px;
+
+// Grid
+$grid-col-count:12;
+$width-gutter:24px;

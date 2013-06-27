@@ -1,0 +1,52 @@
+.nav {
+    list-style:none;
+    margin:0;
+    padding:0;
+
+    li {
+        margin-bottom:$base-font-size;
+
+        a {
+            padding:0.2em;
+
+            font: {
+                size:2em;
+                weight: bold;
+            }
+
+            width:180px;
+            display:inline-block;
+        }
+    }
+}
+
+// desktop
+@media screen and (min-width:$width-desktop-min) {
+    .nav {
+        li {
+            display:block;
+        }
+    }
+}
+
+// mobile
+@media screen and (max-width:$width-tablet-max) {
+    .nav {
+        text-align:center;
+
+        li {
+            display:inline;
+            margin-right:1em;
+            
+            a {
+                width:auto;
+                font-size:$base-font-size * 3;
+            }
+
+        }
+
+        &:last-child{
+            margin:0;
+        }
+    }
+}

@@ -1,3 +1,9 @@
+add_import_path "/usr/lib64/ruby/gems/1.8/gems/color-schemer-0.2.5/stylesheets"
+   
+
+require 'zen-grids'
+require 'color-schemer'
+
 http_path       = "/"
 sass_dir        = "sass"
 css_dir         = "css"

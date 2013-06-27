@@ -116,7 +116,7 @@ Run `scss/new-dir.sh` and specify a path under a top level directory to create a
 
 * Tabs are 4 spaces
 
-* Allman indentation
+* BSD KNF indentation
 
 * Comply with SMACSS
 
